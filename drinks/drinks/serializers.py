@@ -6,3 +6,4 @@ class DrinkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Drinks
         feilds = ['id' , 'name' , 'description']
+        fields = '__all__'

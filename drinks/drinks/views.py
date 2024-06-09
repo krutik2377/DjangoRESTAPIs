@@ -6,5 +6,5 @@ def drink_list(request):
 
     # get all the drinks , serialize them and return Json
     drinks = Drinks.objects.all()
-    DrinkSerializer(drinks, many=true)
-    return JsonResponse(serializer.data)
+    serializer = DrinkSerializer(drinks, many=True)
+    return JsonResponse(serializer.data, safe= False)
